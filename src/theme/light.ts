@@ -5,7 +5,7 @@ export const lightTheme = {
     PRIMARY: '#8775FE',
     TEXT: '#000000',
     TEXT_SECONDARY: '#85868A',
-    BACKGROUND: '#F1F1F1',
+    BACKGROUND: '#F8F8F8',
     SURFACE: '#FFFFFF',
     DIVIDER: 'rgba(235, 235, 230, 1)',
     WHITE: '#FFFFFF',

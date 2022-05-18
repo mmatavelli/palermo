@@ -11,5 +11,5 @@ export const Title = styled.Text`
   font-size: ${RFValue(12)}px;
   text-transform: uppercase;
   padding: 0 20px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 `;

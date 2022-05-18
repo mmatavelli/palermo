@@ -5,10 +5,16 @@ import { Chip } from '../../../../components/Chip';
 import { Container, Title } from './styles';
 
 type FilterProps = {
+  selectedCategory: string;
   categories?: string[];
+  onCategoryChange: (category: string) => void;
 };
 
-export function Filter({ categories }: FilterProps) {
+export function Filter({
+  selectedCategory,
+  categories,
+  onCategoryChange,
+}: FilterProps) {
   return (
     <Container>
       <Title>Filtrar categoria</Title>
@@ -19,15 +25,26 @@ export function Filter({ categories }: FilterProps) {
           paddingHorizontal: 20,
         }}
       >
+        <Chip
+          label="Últimos"
+          checked={selectedCategory === 'last'}
+          style={{
+            marginRight: 20,
+          }}
+          onPress={() => {
+            onCategoryChange('last');
+          }}
+        />
         {categories?.map(category => (
           <Chip
             key={category}
             label={category}
+            checked={selectedCategory === category}
             style={{
               marginRight: 20,
             }}
             onPress={() => {
-              console.log('pressed');
+              onCategoryChange(category);
             }}
           />
         ))}

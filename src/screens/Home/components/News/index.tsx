@@ -28,8 +28,6 @@ type NewsProps = {
 export function News({ products }: NewsProps) {
   const { items, addToCart } = useCart();
 
-  console.log(items);
-
   const handleAddToCart = (product: Product) => {
     addToCart({
       id: product.id,

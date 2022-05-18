@@ -3,7 +3,9 @@ import styled from 'styled-components/native';
 
 import { generateBoxShadowStyle } from '../../utils/generateBoxShadow';
 
-export const Container = styled.ScrollView``;
+export const Container = styled.ScrollView`
+  padding-bottom: 140px;
+`;
 
 export const Header = styled.View`
   flex-direction: row;
@@ -16,12 +18,6 @@ export const Header = styled.View`
 export const HeaderTitle = styled.Text`
   font-size: ${RFValue(23)}px;
   font-family: ${({ theme }) => theme.fonts.WorkSansBold};
-`;
-
-export const BagIcon = styled.Image.attrs({
-  source: require('../../assets/icons/BAG_1.png'),
-})`
-  tint-color: ${({ theme }) => theme.colors.PRIMARY};
 `;
 
 export const Divider = styled.View`

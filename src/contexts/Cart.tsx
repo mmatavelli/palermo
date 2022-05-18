@@ -1,5 +1,11 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-import React, { createContext, useCallback, useMemo, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, {
+  createContext,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import { Product } from '../types/product';
 
@@ -19,6 +25,7 @@ export type CartContextData = {
   addToCart(product: Pick<Product, 'id' | 'title' | 'price' | 'image'>): void;
   updateAmount(id: number, amount: number): void;
   removeFromCart(id: number): void;
+  clearCart(): void;
 };
 
 export const CartContext = createContext<CartContextData>(
@@ -28,8 +35,31 @@ export const CartContext = createContext<CartContextData>(
 export function CartProvider({ children }: CartProviderProps) {
   const [items, setItems] = useState<CartItem[]>([]);
 
+  useEffect(() => {
+    const loadCart = async () => {
+      const cart = await AsyncStorage.getItem('@GoMarketplace:cart');
+      // console.log('loading cart', cart);
+      if (cart) {
+        setItems(JSON.parse(cart));
+      }
+    };
+
+    loadCart();
+  }, []);
+
+  const saveOnLocalStorage = useCallback(async () => {
+    console.log('saving on local storage');
+    await AsyncStorage.setItem('@GoMarketplace:cart', JSON.stringify(items));
+    const cart = await AsyncStorage.getItem('@GoMarketplace:cart');
+    console.log('loading cart', cart);
+  }, [items]);
+
+  useEffect(() => {
+    saveOnLocalStorage();
+  }, [saveOnLocalStorage]);
+
   const addToCart = useCallback(
-    async (product: Pick<Product, 'id' | 'title' | 'price'>) => {
+    async (product: Pick<Product, 'id' | 'title' | 'price' | 'image'>) => {
       setItems(oldItems => {
         const newData = [...oldItems];
 
@@ -68,11 +98,17 @@ export function CartProvider({ children }: CartProviderProps) {
       const productIndex = oldItems.findIndex(item => item.id === productId);
 
       if (productIndex >= 0) {
-        newData[productIndex].quantity -= 1;
+        newData.splice(productIndex, 1);
       }
 
       return newData;
     });
+  }, []);
+
+  const clearCart = useCallback(async () => {
+    setItems([]);
+
+    await AsyncStorage.removeItem('@GoMarketplace:cart');
   }, []);
 
   const dialogContextData = useMemo(() => {
@@ -81,8 +117,9 @@ export function CartProvider({ children }: CartProviderProps) {
       addToCart,
       updateAmount,
       removeFromCart,
+      clearCart,
     };
-  }, [items, addToCart, updateAmount, removeFromCart]);
+  }, [items, addToCart, updateAmount, removeFromCart, clearCart]);
 
   return (
     <CartContext.Provider value={dialogContextData}>

@@ -16,6 +16,7 @@
 		38C5A707F8A4414ABB638F4D /* WorkSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C574B65883A24EF0AF01FFD1 /* WorkSans-Light.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-palermo-palermoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-palermo-palermoTests.a */; };
 		78FE2B5A2D274DE1AB2FB0E2 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8C147CBD97247439E3E7FEF /* WorkSans-Bold.ttf */; };
+		7D37EF4B2835628900EF28DF /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FCD70EB2A39449BBFB9F227 /* Feather.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		DC5DE37B734A471A80477450 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7549BB4F70004B9CBF991470 /* WorkSans-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -45,12 +46,13 @@
 		5709B34CF0A7D63546082F79 /* Pods-palermo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-palermo.release.xcconfig"; path = "Target Support Files/Pods-palermo/Pods-palermo.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-palermo-palermoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-palermo-palermoTests.debug.xcconfig"; path = "Target Support Files/Pods-palermo-palermoTests/Pods-palermo-palermoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-palermo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-palermo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7549BB4F70004B9CBF991470 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Regular.ttf"; path = "../src/assets/fonts/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		7549BB4F70004B9CBF991470 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Regular.ttf"; path = "../src/assets/fonts/WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		7FCD70EB2A39449BBFB9F227 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = palermo/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-palermo-palermoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-palermo-palermoTests.release.xcconfig"; path = "Target Support Files/Pods-palermo-palermoTests/Pods-palermo-palermoTests.release.xcconfig"; sourceTree = "<group>"; };
-		A20A92BEFCC4491D9D5DFD83 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Medium.ttf"; path = "../src/assets/fonts/WorkSans-Medium.ttf"; sourceTree = "<group>"; };
-		C574B65883A24EF0AF01FFD1 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Light.ttf"; path = "../src/assets/fonts/WorkSans-Light.ttf"; sourceTree = "<group>"; };
-		C8C147CBD97247439E3E7FEF /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Bold.ttf"; path = "../src/assets/fonts/WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		A20A92BEFCC4491D9D5DFD83 /* WorkSans-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Medium.ttf"; path = "../src/assets/fonts/WorkSans-Medium.ttf"; sourceTree = "<group>"; };
+		C574B65883A24EF0AF01FFD1 /* WorkSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Light.ttf"; path = "../src/assets/fonts/WorkSans-Light.ttf"; sourceTree = "<group>"; };
+		C8C147CBD97247439E3E7FEF /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WorkSans-Bold.ttf"; path = "../src/assets/fonts/WorkSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -121,9 +123,9 @@
 				C574B65883A24EF0AF01FFD1 /* WorkSans-Light.ttf */,
 				A20A92BEFCC4491D9D5DFD83 /* WorkSans-Medium.ttf */,
 				7549BB4F70004B9CBF991470 /* WorkSans-Regular.ttf */,
+				7FCD70EB2A39449BBFB9F227 /* Feather.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -263,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D37EF4B2835628900EF28DF /* Feather.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				78FE2B5A2D274DE1AB2FB0E2 /* WorkSans-Bold.ttf in Resources */,
